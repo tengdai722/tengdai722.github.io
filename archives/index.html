@@ -69,7 +69,7 @@
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
         scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
-        search: 
+        search: true
     }
 </script>
 
@@ -101,6 +101,13 @@
 
         
 
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
         
 
 
@@ -180,7 +187,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/深度学习-Fall19/">深度学习(Fall19)</a></li></ul>
                     </div>
                 </section>
                 
@@ -274,8 +281,8 @@
   <div class="archive-article-inner">
     <header class="archive-article-header">
           <div class="article-meta">
-              <a href="/2019/09/17/hello-world/" class="archive-article-date">
-      <time datetime="2019-09-17T17:54:37.553Z" itemprop="datePublished">09-17</time>
+              <a href="/2019/09/17/从零开始Python实现卷积神经网络识别手写数字-MNIST/" class="archive-article-date">
+      <time datetime="2019-09-17T18:19:18.000Z" itemprop="datePublished">09-17</time>
 </a>
 
 
@@ -283,7 +290,7 @@
          
   
     <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/17/hello-world/">Hello World</a>
+      <a class="archive-article-title" href="/2019/09/17/从零开始Python实现卷积神经网络识别手写数字-MNIST/">从零开始Python实现卷积神经网络识别手写数字(MNIST)</a>
     </h1>
   
 
@@ -291,6 +298,10 @@
           
 
           
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/深度学习-Fall19/">深度学习(Fall19)</a></li></ul>
+    </div>
+
         </div>
         <div class="clearfix"></div>
     </header>
