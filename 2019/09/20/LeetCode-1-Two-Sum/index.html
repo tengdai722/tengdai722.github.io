@@ -24,7 +24,7 @@
 <meta property="og:description" content="LeetCode 1 Two Sum | 问题描述 | 解题思路 | Java代码 | 相关问题">
 <meta property="og:locale" content="ch">
 <meta property="og:image" content="https://raw.githubusercontent.com/tengdai722/tengdai722.github.io/master/img/leetcode_question/LC0001.png">
-<meta property="og:updated_time" content="2019-09-21T21:09:00.420Z">
+<meta property="og:updated_time" content="2019-09-21T21:19:52.236Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode 1 Two Sum">
 <meta name="twitter:description" content="LeetCode 1 Two Sum | 问题描述 | 解题思路 | Java代码 | 相关问题">
@@ -294,7 +294,7 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] twoSum(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target) &#123;</span><br><span class="line">        <span class="keyword">if</span> (nums == <span class="keyword">null</span> || nums.length == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        HashMap&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (map.containsKey(nums[i])) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[] &#123;map.get(nums[i]), i&#125;;</span><br><span class="line">            &#125; </span><br><span class="line">            map.put(target - nums[i], i);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2>相关问题</h2>
 <p><a href="https://tengdai722.github.io/2019/09/21/LeetCode-15-3Sum/" target="_blank" rel="noopener">LeetCode 15 3Sum</a><br>
-<a href></a><br>
+<a href="https://tengdai722.github.io/2019/09/21/LeetCode-18-4Sum/" target="_blank" rel="noopener">LeetCode 18 4Sum</a><br>
 <a href></a></p>
 
       
@@ -420,7 +420,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/09/21/LeetCode-15-3Sum/">LeetCode 15 3Sum</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/21/LeetCode-刷题总结/">LeetCode 刷题总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/20/LeetCode-1-Two-Sum/">LeetCode 1 Two Sum</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/17/从零开始Python实现卷积神经网络识别手写数字-MNIST/">从零开始Python实现卷积神经网络识别手写数字(MNIST)</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/09/21/LeetCode-18-4Sum/">LeetCode 18 4Sum</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/21/LeetCode-15-3Sum/">LeetCode 15 3Sum</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/21/LeetCode-刷题总结/">LeetCode 刷题总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/20/LeetCode-1-Two-Sum/">LeetCode 1 Two Sum</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/17/从零开始Python实现卷积神经网络识别手写数字-MNIST/">从零开始Python实现卷积神经网络识别手写数字(MNIST)</a></li></ul>
 
 
 
