@@ -15,18 +15,18 @@
 
 
 
-<meta name="description" content="从零开始用Python实现一个卷积神经网络(CNN)来识别手写数字(MNIST)。代码 + 推导同时奉上。">
+<meta name="description" content="从零开始用Python实现一个卷积神经网络(CNN)来识别手写数字(MNIST)。代码 + 推导同时奉上。 &amp;lt;!-- more --&amp;gt; 卷积神经网络(Convolution Neural Network)是时下很流行的一种神经网络。时至今日我们已有很多框架可以进行卷积神经网络的构建和训练，但是很多时候 只知其表不知其里。这边文章来推导一下卷积神经网络的相关公式，并用只用Python(n">
 <meta name="keywords" content="深度学习">
 <meta property="og:type" content="article">
 <meta property="og:title" content="从零开始Python实现卷积神经网络识别手写数字(MNIST)">
 <meta property="og:url" content="http://yoursite.com/2019/09/17/从零开始Python实现卷积神经网络识别手写数字-MNIST/index.html">
 <meta property="og:site_name" content="TD">
-<meta property="og:description" content="从零开始用Python实现一个卷积神经网络(CNN)来识别手写数字(MNIST)。代码 + 推导同时奉上。">
+<meta property="og:description" content="从零开始用Python实现一个卷积神经网络(CNN)来识别手写数字(MNIST)。代码 + 推导同时奉上。 &amp;lt;!-- more --&amp;gt; 卷积神经网络(Convolution Neural Network)是时下很流行的一种神经网络。时至今日我们已有很多框架可以进行卷积神经网络的构建和训练，但是很多时候 只知其表不知其里。这边文章来推导一下卷积神经网络的相关公式，并用只用Python(n">
 <meta property="og:locale" content="ch">
 <meta property="og:updated_time" content="2019-09-21T18:30:26.235Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="从零开始Python实现卷积神经网络识别手写数字(MNIST)">
-<meta name="twitter:description" content="从零开始用Python实现一个卷积神经网络(CNN)来识别手写数字(MNIST)。代码 + 推导同时奉上。">
+<meta name="twitter:description" content="从零开始用Python实现一个卷积神经网络(CNN)来识别手写数字(MNIST)。代码 + 推导同时奉上。 &amp;lt;!-- more --&amp;gt; 卷积神经网络(Convolution Neural Network)是时下很流行的一种神经网络。时至今日我们已有很多框架可以进行卷积神经网络的构建和训练，但是很多时候 只知其表不知其里。这边文章来推导一下卷积神经网络的相关公式，并用只用Python(n">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -282,15 +282,16 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>从零开始用Python实现一个卷积神经网络(CNN)来识别手写数字(MNIST)。代码 + 推导同时奉上。</p>
-<a id="more"></a>
-
-<p>卷积神经网络(Convolution Neural Network)是时下很流行的一种神经网络。时至今日我们已有很多框架可以进行卷积神经网络的构建和训练，但是很多时候<br>只知其表不知其里。这边文章来推导一下卷积神经网络的相关公式，并用只用Python(numpy)来实现一个简单的卷积神经网络对MNIST数据集进行训练和预测。</p>
-<h2 id="卷积神经网络的推导"><a href="#卷积神经网络的推导" class="headerlink" title="卷积神经网络的推导"></a>卷积神经网络的推导</h2><p>推导过程清楚了之后开始我们的实现吧！</p>
-<h2 id="卷积神经网络的实现"><a href="#卷积神经网络的实现" class="headerlink" title="卷积神经网络的实现"></a>卷积神经网络的实现</h2><p>推导过程清楚了之后开始我们的实现吧！</p>
-<p>我们需要一个SimpleCNN类，并初始化需要的参数。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SimpleCNN</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, input_dim=<span class="number">28</span>, num_class=<span class="number">10</span>, filter_size=<span class="number">3</span>, channel=<span class="number">3</span>)</span>:</span></span><br><span class="line">        self.input_dim = input_dim  <span class="comment"># 输入的维度，MNIST默认是28</span></span><br><span class="line">        self.num_class = num_class  <span class="comment"># 需要判断的类的数目，MNIST任务是10个，0-9</span></span><br><span class="line">        self.filter_size = filter_size  <span class="comment"># 卷积核的维度，这里取长宽相等，默认为3</span></span><br><span class="line">        self.channel = channel  <span class="comment"># 卷积核的深度(通道数)，默认3</span></span><br><span class="line">        self.output_dim = input_dim - filter_size + <span class="number">1</span>  <span class="comment"># 计算输出的维度，公式：N_out = N_input - D_kernel + 1</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 初始化参数，这里用了Xavier初始化</span></span><br><span class="line">        self.kernel = np.random.uniform(<span class="number">-1</span>, <span class="number">1</span>, (self.filter_size, self.filter_size, self.channel)) * \</span><br><span class="line">                      math.sqrt(<span class="number">6.</span> / (input_dim + self.output_dim))</span><br><span class="line">        self.params_w = np.random.uniform(<span class="number">-1</span>, <span class="number">1</span>, (self.num_class, self.output_dim, self.output_dim, self.channel)) * \</span><br><span class="line">                        math.sqrt(<span class="number">6.</span> / (self.input_dim + self.output_dim))</span><br><span class="line">        self.params_b = np.random.uniform(<span class="number">-1</span>, <span class="number">1</span>, self.num_class)</span><br></pre></td></tr></table></figure>
-
+        <p>从零开始用Python实现一个卷积神经网络(CNN)来识别手写数字(MNIST)。代码 + 推导同时奉上。
+&lt;!-- more --&gt;</p>
+<p>卷积神经网络(Convolution Neural Network)是时下很流行的一种神经网络。时至今日我们已有很多框架可以进行卷积神经网络的构建和训练，但是很多时候
+只知其表不知其里。这边文章来推导一下卷积神经网络的相关公式，并用只用Python(numpy)来实现一个简单的卷积神经网络对MNIST数据集进行训练和预测。</p>
+<h2>卷积神经网络的推导</h2>
+<p>推导过程清楚了之后开始我们的实现吧！</p>
+<h2>卷积神经网络的实现</h2>
+<p>推导过程清楚了之后开始我们的实现吧！</p>
+<p>我们需要一个SimpleCNN类，并初始化需要的参数。
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SimpleCNN</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, input_dim=<span class="number">28</span>, num_class=<span class="number">10</span>, filter_size=<span class="number">3</span>, channel=<span class="number">3</span>)</span>:</span></span><br><span class="line">        self.input_dim = input_dim  <span class="comment"># 输入的维度，MNIST默认是28</span></span><br><span class="line">        self.num_class = num_class  <span class="comment"># 需要判断的类的数目，MNIST任务是10个，0-9</span></span><br><span class="line">        self.filter_size = filter_size  <span class="comment"># 卷积核的维度，这里取长宽相等，默认为3</span></span><br><span class="line">        self.channel = channel  <span class="comment"># 卷积核的深度(通道数)，默认3</span></span><br><span class="line">        self.output_dim = input_dim - filter_size + <span class="number">1</span>  <span class="comment"># 计算输出的维度，公式：N_out = N_input - D_kernel + 1</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 初始化参数，这里用了Xavier初始化</span></span><br><span class="line">        self.kernel = np.random.uniform(<span class="number">-1</span>, <span class="number">1</span>, (self.filter_size, self.filter_size, self.channel)) * \</span><br><span class="line">                      math.sqrt(<span class="number">6.</span> / (input_dim + self.output_dim))</span><br><span class="line">        self.params_w = np.random.uniform(<span class="number">-1</span>, <span class="number">1</span>, (self.num_class, self.output_dim, self.output_dim, self.channel)) * \</span><br><span class="line">                        math.sqrt(<span class="number">6.</span> / (self.input_dim + self.output_dim))</span><br><span class="line">        self.params_b = np.random.uniform(<span class="number">-1</span>, <span class="number">1</span>, self.num_class)</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -317,7 +318,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#卷积神经网络的推导"><span class="toc-number">1.</span> <span class="toc-text">卷积神经网络的推导</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#卷积神经网络的实现"><span class="toc-number">2.</span> <span class="toc-text">卷积神经网络的实现</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">1.</span> <span class="toc-text">卷积神经网络的推导</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">2.</span> <span class="toc-text">卷积神经网络的实现</span></a></li></ol>
         
     </div>
     <style>

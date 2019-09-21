@@ -269,8 +269,27 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-              <p>LeetCode 刷题总结 | Java | 缓慢更新中</p>
-          
+        <p>LeetCode 刷题总结 | Java | 缓慢更新中
+&lt;!-- more --&gt;</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">No.</th>
+<th style="text-align:center">Title</th>
+<th style="text-align:center">Difficulty</th>
+<th style="text-align:center">Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center"><a href="https://leetcode.com/problems/two-sum/" target="_blank" rel="noopener">Two Sum</a></td>
+<td style="text-align:center"><a href="https://tengdai722.github.io/tags/Easy/" target="_blank" rel="noopener">Easy</a></td>
+<td style="text-align:center"><a href="https://tengdai722.github.io/2019/09/20/LeetCode-1-Two-Sum/" target="_blank" rel="noopener">Solution</a></td>
+</tr>
+</tbody>
+</table>
+
       
     </div>
     
@@ -291,10 +310,6 @@
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li></ul>
     </div>
 
-      
-        <p class="article-more-link">
-          <a href="/2019/09/21/LeetCode-刷题总结/#more">more >></a>
-        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -341,8 +356,18 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-              <p>LeetCode 1 Two Sum | 问题描述 | 解题思路 | Java代码 | 相关问题</p>
-          
+        <p>LeetCode 1 Two Sum | 问题描述 | 解题思路 | Java代码 | 相关问题
+&lt;!-- more --&gt;</p>
+<h2>问题描述</h2>
+<p>&lt;img src=&quot;https://raw.githubusercontent.com/tengdai722/tengdai722.github.io/master/img/leetcode_question/LC0001.png&quot; width=&quot;75%&quot; height=&quot;75%&quot;&gt;</p>
+<h2>解题思路</h2>
+<h2>Java代码</h2>
+<p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] twoSum(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target) &#123;</span><br><span class="line">        <span class="keyword">if</span>(nums == <span class="keyword">null</span> || nums.length == <span class="number">0</span>) <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">0</span>];</span><br><span class="line">        HashMap&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span>(map.containsKey(nums[i])) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[] &#123;map.get(nums[i]), i&#125;;</span><br><span class="line">            &#125; </span><br><span class="line">            map.put(target - nums[i], i);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2>相关问题</h2>
+<p><a href></a>
+<a href></a>
+<a href></a></p>
+
       
     </div>
     
@@ -359,10 +384,6 @@
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Array/">Array</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Easy/">Easy</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hash-Table/">Hash Table</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li></ul>
     </div>
 
-      
-        <p class="article-more-link">
-          <a href="/2019/09/20/LeetCode-1-Two-Sum/#more">more >></a>
-        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -409,8 +430,17 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-              <p>从零开始用Python实现一个卷积神经网络(CNN)来识别手写数字(MNIST)。代码 + 推导同时奉上。</p>
-          
+        <p>从零开始用Python实现一个卷积神经网络(CNN)来识别手写数字(MNIST)。代码 + 推导同时奉上。
+&lt;!-- more --&gt;</p>
+<p>卷积神经网络(Convolution Neural Network)是时下很流行的一种神经网络。时至今日我们已有很多框架可以进行卷积神经网络的构建和训练，但是很多时候
+只知其表不知其里。这边文章来推导一下卷积神经网络的相关公式，并用只用Python(numpy)来实现一个简单的卷积神经网络对MNIST数据集进行训练和预测。</p>
+<h2>卷积神经网络的推导</h2>
+<p>推导过程清楚了之后开始我们的实现吧！</p>
+<h2>卷积神经网络的实现</h2>
+<p>推导过程清楚了之后开始我们的实现吧！</p>
+<p>我们需要一个SimpleCNN类，并初始化需要的参数。
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SimpleCNN</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, input_dim=<span class="number">28</span>, num_class=<span class="number">10</span>, filter_size=<span class="number">3</span>, channel=<span class="number">3</span>)</span>:</span></span><br><span class="line">        self.input_dim = input_dim  <span class="comment"># 输入的维度，MNIST默认是28</span></span><br><span class="line">        self.num_class = num_class  <span class="comment"># 需要判断的类的数目，MNIST任务是10个，0-9</span></span><br><span class="line">        self.filter_size = filter_size  <span class="comment"># 卷积核的维度，这里取长宽相等，默认为3</span></span><br><span class="line">        self.channel = channel  <span class="comment"># 卷积核的深度(通道数)，默认3</span></span><br><span class="line">        self.output_dim = input_dim - filter_size + <span class="number">1</span>  <span class="comment"># 计算输出的维度，公式：N_out = N_input - D_kernel + 1</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 初始化参数，这里用了Xavier初始化</span></span><br><span class="line">        self.kernel = np.random.uniform(<span class="number">-1</span>, <span class="number">1</span>, (self.filter_size, self.filter_size, self.channel)) * \</span><br><span class="line">                      math.sqrt(<span class="number">6.</span> / (input_dim + self.output_dim))</span><br><span class="line">        self.params_w = np.random.uniform(<span class="number">-1</span>, <span class="number">1</span>, (self.num_class, self.output_dim, self.output_dim, self.channel)) * \</span><br><span class="line">                        math.sqrt(<span class="number">6.</span> / (self.input_dim + self.output_dim))</span><br><span class="line">        self.params_b = np.random.uniform(<span class="number">-1</span>, <span class="number">1</span>, self.num_class)</span><br></pre></td></tr></table></figure></p>
+
       
     </div>
     
@@ -427,10 +457,6 @@
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/深度学习/">深度学习</a></li></ul>
     </div>
 
-      
-        <p class="article-more-link">
-          <a href="/2019/09/17/从零开始Python实现卷积神经网络识别手写数字-MNIST/#more">more >></a>
-        </p>
       
       <div class="clearfix"></div>
     </div>
