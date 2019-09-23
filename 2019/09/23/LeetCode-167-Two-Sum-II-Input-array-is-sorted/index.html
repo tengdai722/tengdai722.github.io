@@ -16,7 +16,7 @@
 
 
 <meta name="description" content="LeetCode 167 Two Sum II - Input array is sorted | 问题描述 | 解题思路 | Java代码 | 相关问题">
-<meta name="keywords" content="LeetCode,Array,Hash Table,Easy">
+<meta name="keywords" content="LeetCode,Array,Easy,Binary Search,Two Pointers">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LeetCode 167 Two Sum II - Input array is sorted">
 <meta property="og:url" content="http://yoursite.com/2019/09/23/LeetCode-167-Two-Sum-II-Input-array-is-sorted/index.html">
@@ -24,7 +24,7 @@
 <meta property="og:description" content="LeetCode 167 Two Sum II - Input array is sorted | 问题描述 | 解题思路 | Java代码 | 相关问题">
 <meta property="og:locale" content="ch">
 <meta property="og:image" content="https://raw.githubusercontent.com/tengdai722/tengdai722.github.io/master/img/leetcode_question/LC0167.png">
-<meta property="og:updated_time" content="2019-09-23T21:49:47.353Z">
+<meta property="og:updated_time" content="2019-09-23T21:53:08.681Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode 167 Two Sum II - Input array is sorted">
 <meta name="twitter:description" content="LeetCode 167 Two Sum II - Input array is sorted | 问题描述 | 解题思路 | Java代码 | 相关问题">
@@ -274,7 +274,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Array/">Array</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Easy/">Easy</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hash-Table/">Hash Table</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Array/">Array</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Binary-Search/">Binary Search</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Easy/">Easy</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Two-Pointers/">Two Pointers</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -289,9 +289,9 @@
 <h2>问题描述</h2>
 <img src="https://raw.githubusercontent.com/tengdai722/tengdai722.github.io/master/img/leetcode_question/LC0167.png" width="75%" height="75%">
 <h2>解题思路</h2>
-<p>题目假设只有一对答案，那么建立HashMap，每扫过一个元素，把target与当前元素的差当做key，下标当做value存入map。这样如果接下来扫到任何一个元素已经在map里面出现，证明它可以和之前扫过的一个元素形成答案。那么提取出存好的下标，和当前下标组成答案即可。</p>
+<p>排过序的数组直接用双指针扫描即可。也可以固定一个数，另一个数用二分查找，只是稍慢一点。</p>
 <h2>Java代码</h2>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] twoSum(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target) &#123;</span><br><span class="line">        <span class="keyword">if</span> (nums == <span class="keyword">null</span> || nums.length == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        HashMap&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (map.containsKey(nums[i])) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[] &#123;map.get(nums[i]), i&#125;;</span><br><span class="line">            &#125; </span><br><span class="line">            map.put(target - nums[i], i);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] twoSum(<span class="keyword">int</span>[] numbers, <span class="keyword">int</span> target) &#123;</span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">0</span>, j = numbers.length - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(i &lt; j &amp;&amp; numbers[i] != target - numbers[j]) &#123;</span><br><span class="line">            <span class="keyword">if</span>(numbers[i] &gt; target - numbers[j]) j--;</span><br><span class="line">            <span class="keyword">else</span> i++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span>[] res = &#123;i + <span class="number">1</span>, j + <span class="number">1</span>&#125;;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2>相关问题</h2>
 <p><a href="https://tengdai722.github.io/2019/09/20/LeetCode-1-Two-Sum/" target="_blank" rel="noopener">LeetCode 1 Two Sum</a><br>
 <a href></a></p>
