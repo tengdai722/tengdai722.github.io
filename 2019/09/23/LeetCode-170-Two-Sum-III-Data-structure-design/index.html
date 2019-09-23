@@ -15,20 +15,20 @@
 
 
 
-<meta name="description" content="LeetCode 15 3Sum | 问题描述 | 解题思路 | Java代码 | 相关问题">
-<meta name="keywords" content="LeetCode,Array,Medium,Two Pointers">
+<meta name="description" content="LeetCode 170 Two Sum III - Data structure design | 问题描述 | 解题思路 | Java代码 | 相关问题">
+<meta name="keywords" content="LeetCode,Hash Table,Easy,Design">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode 15 3Sum">
-<meta property="og:url" content="http://yoursite.com/2019/09/21/LeetCode-15-3Sum/index.html">
+<meta property="og:title" content="LeetCode 170 Two Sum III - Data structure design">
+<meta property="og:url" content="http://yoursite.com/2019/09/23/LeetCode-170-Two-Sum-III-Data-structure-design/index.html">
 <meta property="og:site_name" content="TD">
-<meta property="og:description" content="LeetCode 15 3Sum | 问题描述 | 解题思路 | Java代码 | 相关问题">
+<meta property="og:description" content="LeetCode 170 Two Sum III - Data structure design | 问题描述 | 解题思路 | Java代码 | 相关问题">
 <meta property="og:locale" content="ch">
-<meta property="og:image" content="https://raw.githubusercontent.com/tengdai722/tengdai722.github.io/master/img/leetcode_question/LC0015.png">
-<meta property="og:updated_time" content="2019-09-21T21:20:06.147Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/tengdai722/tengdai722.github.io/master/img/leetcode_question/LC0170.png">
+<meta property="og:updated_time" content="2019-09-23T22:27:57.856Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode 15 3Sum">
-<meta name="twitter:description" content="LeetCode 15 3Sum | 问题描述 | 解题思路 | Java代码 | 相关问题">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/tengdai722/tengdai722.github.io/master/img/leetcode_question/LC0015.png">
+<meta name="twitter:title" content="LeetCode 170 Two Sum III - Data structure design">
+<meta name="twitter:description" content="LeetCode 170 Two Sum III - Data structure design | 问题描述 | 解题思路 | Java代码 | 相关问题">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/tengdai722/tengdai722.github.io/master/img/leetcode_question/LC0170.png">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -60,7 +60,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>LeetCode 15 3Sum | TD</title>
+<title>LeetCode 170 Two Sum III - Data structure design | TD</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -240,11 +240,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-LeetCode-15-3Sum" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-LeetCode-170-Two-Sum-III-Data-structure-design" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/09/21/LeetCode-15-3Sum/" class="article-date">
-      <time datetime="2019-09-21T20:35:11.000Z" itemprop="datePublished">2019-09-21</time>
+      <a href="/2019/09/23/LeetCode-170-Two-Sum-III-Data-structure-design/" class="article-date">
+      <time datetime="2019-09-23T22:22:57.000Z" itemprop="datePublished">2019-09-23</time>
 </a>
 
 
@@ -259,7 +259,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      LeetCode 15 3Sum
+      LeetCode 170 Two Sum III - Data structure design
     </h1>
   
 
@@ -274,7 +274,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Array/">Array</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Medium/">Medium</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Two-Pointers/">Two Pointers</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Design/">Design</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Easy/">Easy</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hash-Table/">Hash Table</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -284,18 +284,16 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>LeetCode 15 3Sum | 问题描述 | 解题思路 | Java代码 | 相关问题</p>
+        <p>LeetCode 170 Two Sum III - Data structure design | 问题描述 | 解题思路 | Java代码 | 相关问题</p>
 <a id="more"></a>
 <h2>问题描述</h2>
-<img src="https://raw.githubusercontent.com/tengdai722/tengdai722.github.io/master/img/leetcode_question/LC0015.png" width="75%" height="75%">
+<img src="https://raw.githubusercontent.com/tengdai722/tengdai722.github.io/master/img/leetcode_question/LC0170.png" width="75%" height="75%">
 <h2>解题思路</h2>
-<p>2Sum进阶，先锁定一个元素变成2Sum，在剩下的元素里找可以加和成锁定元素相反数的两个元素。这里用到双指针的思路，分别从锁定元素的下一位以及数组尾部同时向中间移动。为了可以更高效的利用双指针，将输入数组进行排序。这样如果双指针加和小于目标元素(的相反数)，那么只需要移动左指针，反之亦然。考虑到重复的组合不可以被加入到答案中，每次扫描还需要进行去重的操作。那就是如果锁定的元素和上次的一样，要跳过。加和元素任意一个和上次一样，也同样跳过。</p>
+<p>和基础Two Sum想法一样，只不过要注意重复的问题。比如map里只有一个0，那么当value是0的时候还是要返回false，因为只有一个数不满足条件，必须要两个数加和才可以。所以这样的话要记录同样数字的个数。如果加和等于目标的数对是同一个数字，要看map里面是不是有至少两个这样的数。</p>
 <h2>Java代码</h2>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; threeSum(<span class="keyword">int</span>[] nums) &#123;</span><br><span class="line">        List&lt;List&lt;Integer&gt;&gt; res = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">if</span> (nums == <span class="keyword">null</span> || nums.length &lt; <span class="number">3</span>) &#123;</span><br><span class="line">        	<span class="keyword">return</span> res;</span><br><span class="line">        &#125;</span><br><span class="line">        Arrays.sort(nums);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (i &gt; <span class="number">0</span> &amp;&amp; nums[i] == nums[i - <span class="number">1</span>]) &#123;</span><br><span class="line">            	<span class="keyword">continue</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">int</span> target = -nums[i], pLeft = i + <span class="number">1</span>, pRight = nums.length - <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">while</span> (pLeft &lt; pRight) &#123;</span><br><span class="line">                <span class="keyword">if</span> (nums[pLeft] + nums[pRight] &lt; target) &#123;</span><br><span class="line">                	pLeft++;</span><br><span class="line">                &#125; <span class="keyword">else</span> <span class="keyword">if</span> (nums[pLeft] + nums[pRight] &gt; target) &#123;</span><br><span class="line">                	pRight--;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    res.add(<span class="keyword">new</span> ArrayList&lt;Integer&gt;(Arrays.asList(nums[i], nums[pLeft++], nums[pRight--])));</span><br><span class="line">                    <span class="keyword">while</span> (pLeft &lt; pRight &amp;&amp; nums[pLeft] == nums[pLeft - <span class="number">1</span>]) &#123;</span><br><span class="line">                    	pLeft++;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">while</span> (pRight &gt; pLeft &amp;&amp; nums[pRight] == nums[pRight + <span class="number">1</span>]) &#123;</span><br><span class="line">                    	pRight--;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TwoSum</span> </span>&#123;</span><br><span class="line">    Map&lt;Integer, Integer&gt; map;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/** Initialize your data structure here. */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">TwoSum</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/** Add the number to an internal data structure.. */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> number)</span> </span>&#123;</span><br><span class="line">        map.put(number, map.getOrDefault(number, <span class="number">0</span>) + <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/** Find if there exists any pair of numbers which sum is equal to the value. */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> value)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> num1 : map.keySet()) &#123;</span><br><span class="line">            <span class="keyword">int</span> num2 = value - num1;</span><br><span class="line">            <span class="keyword">if</span> (num1 == num2 &amp;&amp; map.get(num1) &gt; <span class="number">1</span> || num1 != num2 &amp;&amp; map.containsKey(num2)) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Your TwoSum object will be instantiated and called as such:</span></span><br><span class="line"><span class="comment"> * TwoSum obj = new TwoSum();</span></span><br><span class="line"><span class="comment"> * obj.add(number);</span></span><br><span class="line"><span class="comment"> * boolean param_2 = obj.find(value);</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
 <h2>相关问题</h2>
 <p><a href="https://tengdai722.github.io/2019/09/20/LeetCode-1-Two-Sum/" target="_blank" rel="noopener">LeetCode 1 Two Sum</a><br>
-<a href="https://tengdai722.github.io/2019/09/21/LeetCode-18-4Sum/" target="_blank" rel="noopener">LeetCode 18 4Sum</a><br>
-<a href></a><br>
 <a href></a></p>
 
       
@@ -308,16 +306,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2019/09/21/LeetCode-18-4Sum/">
-                    LeetCode 18 4Sum
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2019/09/21/LeetCode-刷题总结/">
-                    LeetCode 刷题总结
+                <a href="/2019/09/23/LeetCode-167-Two-Sum-II-Input-array-is-sorted/">
+                    LeetCode 167 Two Sum II - Input array is sorted
                 </a>
             </div>
         
@@ -342,7 +334,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"LeetCode 15 3Sum　| TD　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"LeetCode 170 Two Sum III - Data structure design　| TD　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -361,8 +353,8 @@
     <div id="disqus_thread"></div>
     <script>
         var disqus_config = function(){
-            this.page.url = 'http://yoursite.com/2019/09/21/LeetCode-15-3Sum/';
-            this.page.identifier = '2019/09/21/LeetCode-15-3Sum/';
+            this.page.url = 'http://yoursite.com/2019/09/23/LeetCode-170-Two-Sum-III-Data-structure-design/';
+            this.page.identifier = '2019/09/23/LeetCode-170-Two-Sum-III-Data-structure-design/';
         };
         var loadComment = function(){
             var d = document, s = d.createElement('script');
@@ -384,15 +376,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2019/09/21/LeetCode-18-4Sum/" title="上一篇: LeetCode 18 4Sum">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2019/09/21/LeetCode-刷题总结/" title="下一篇: LeetCode 刷题总结">
+            <a href="/2019/09/23/LeetCode-167-Two-Sum-II-Input-array-is-sorted/" title="下一篇: LeetCode 167 Two Sum II - Input array is sorted">
                 <i class="fa fa-angle-right"></i>
             </a>
         

@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>LeetCode 170 Two Sum III - Data structure design</title>
+      <link href="/2019/09/23/LeetCode-170-Two-Sum-III-Data-structure-design/"/>
+      <url>/2019/09/23/LeetCode-170-Two-Sum-III-Data-structure-design/</url>
+      
+        <content type="html"><![CDATA[<p>LeetCode 170 Two Sum III - Data structure design | 问题描述 | 解题思路 | Java代码 | 相关问题</p><a id="more"></a><h2>问题描述</h2><img src="https://raw.githubusercontent.com/tengdai722/tengdai722.github.io/master/img/leetcode_question/LC0170.png" width="75%" height="75%"><h2>解题思路</h2><p>和基础Two Sum想法一样，只不过要注意重复的问题。比如map里只有一个0，那么当value是0的时候还是要返回false，因为只有一个数不满足条件，必须要两个数加和才可以。所以这样的话要记录同样数字的个数。如果加和等于目标的数对是同一个数字，要看map里面是不是有至少两个这样的数。</p><h2>Java代码</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TwoSum</span> </span>&#123;</span><br><span class="line">    Map&lt;Integer, Integer&gt; map;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/** Initialize your data structure here. */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">TwoSum</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/** Add the number to an internal data structure.. */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> number)</span> </span>&#123;</span><br><span class="line">        map.put(number, map.getOrDefault(number, <span class="number">0</span>) + <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/** Find if there exists any pair of numbers which sum is equal to the value. */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> value)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> num1 : map.keySet()) &#123;</span><br><span class="line">            <span class="keyword">int</span> num2 = value - num1;</span><br><span class="line">            <span class="keyword">if</span> (num1 == num2 &amp;&amp; map.get(num1) &gt; <span class="number">1</span> || num1 != num2 &amp;&amp; map.containsKey(num2)) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Your TwoSum object will be instantiated and called as such:</span></span><br><span class="line"><span class="comment"> * TwoSum obj = new TwoSum();</span></span><br><span class="line"><span class="comment"> * obj.add(number);</span></span><br><span class="line"><span class="comment"> * boolean param_2 = obj.find(value);</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure><h2>相关问题</h2><p><a href="https://tengdai722.github.io/2019/09/20/LeetCode-1-Two-Sum/" target="_blank" rel="noopener">LeetCode 1 Two Sum</a><br><a href></a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> LeetCode </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> LeetCode </tag>
+            
+            <tag> Hash Table </tag>
+            
+            <tag> Easy </tag>
+            
+            <tag> Design </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>LeetCode 167 Two Sum II - Input array is sorted</title>
       <link href="/2019/09/23/LeetCode-167-Two-Sum-II-Input-array-is-sorted/"/>
       <url>/2019/09/23/LeetCode-167-Two-Sum-II-Input-array-is-sorted/</url>
