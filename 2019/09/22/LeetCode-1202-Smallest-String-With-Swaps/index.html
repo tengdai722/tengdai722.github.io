@@ -15,21 +15,22 @@
 
 
 
-<meta name="description" content="LeetCode 1201 Ugly Number III | 问题描述 | 解题思路 | Java代码 | 相关问题">
-<meta name="keywords" content="LeetCode,Math,Binary Search,Medium">
+<meta name="description" content="LeetCode 1202 Smallest String With Swaps | 问题描述 | 解题思路 | Java代码 | 相关问题">
+<meta name="keywords" content="LeetCode,Array,Medium,Union Find">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode 1201 Ugly Number III">
-<meta property="og:url" content="http://yoursite.com/2019/09/22/LeetCode-1201-Ugly-Number-III/index.html">
+<meta property="og:title" content="LeetCode 1202 Smallest String With Swaps">
+<meta property="og:url" content="http://yoursite.com/2019/09/22/LeetCode-1202-Smallest-String-With-Swaps/index.html">
 <meta property="og:site_name" content="TD">
-<meta property="og:description" content="LeetCode 1201 Ugly Number III | 问题描述 | 解题思路 | Java代码 | 相关问题">
+<meta property="og:description" content="LeetCode 1202 Smallest String With Swaps | 问题描述 | 解题思路 | Java代码 | 相关问题">
 <meta property="og:locale" content="ch">
-<meta property="og:image" content="https://raw.githubusercontent.com/tengdai722/tengdai722.github.io/master/img/leetcode_question/LC1201_1.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/tengdai722/tengdai722.github.io/master/img/leetcode_question/LC1201_2.png">
-<meta property="og:updated_time" content="2019-09-22T16:52:46.341Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/tengdai722/tengdai722.github.io/master/img/leetcode_question/LC1202_1.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/tengdai722/tengdai722.github.io/master/img/leetcode_question/LC1202_2.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/tengdai722/tengdai722.github.io/master/img/leetcode_question/LC1202_3.png">
+<meta property="og:updated_time" content="2019-09-23T03:59:25.429Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode 1201 Ugly Number III">
-<meta name="twitter:description" content="LeetCode 1201 Ugly Number III | 问题描述 | 解题思路 | Java代码 | 相关问题">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/tengdai722/tengdai722.github.io/master/img/leetcode_question/LC1201_1.png">
+<meta name="twitter:title" content="LeetCode 1202 Smallest String With Swaps">
+<meta name="twitter:description" content="LeetCode 1202 Smallest String With Swaps | 问题描述 | 解题思路 | Java代码 | 相关问题">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/tengdai722/tengdai722.github.io/master/img/leetcode_question/LC1202_1.png">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -61,7 +62,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>LeetCode 1201 Ugly Number III | TD</title>
+<title>LeetCode 1202 Smallest String With Swaps | TD</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -241,11 +242,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-LeetCode-1201-Ugly-Number-III" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-LeetCode-1202-Smallest-String-With-Swaps" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/09/22/LeetCode-1201-Ugly-Number-III/" class="article-date">
-      <time datetime="2019-09-22T16:29:15.000Z" itemprop="datePublished">2019-09-22</time>
+      <a href="/2019/09/22/LeetCode-1202-Smallest-String-With-Swaps/" class="article-date">
+      <time datetime="2019-09-23T03:43:36.000Z" itemprop="datePublished">2019-09-22</time>
 </a>
 
 
@@ -260,7 +261,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      LeetCode 1201 Ugly Number III
+      LeetCode 1202 Smallest String With Swaps
     </h1>
   
 
@@ -275,7 +276,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Binary-Search/">Binary Search</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Math/">Math</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Medium/">Medium</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Array/">Array</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Medium/">Medium</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Union-Find/">Union Find</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -285,16 +286,18 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>LeetCode 1201 Ugly Number III | 问题描述 | 解题思路 | Java代码 | 相关问题</p>
+        <p>LeetCode 1202 Smallest String With Swaps | 问题描述 | 解题思路 | Java代码 | 相关问题</p>
 <a id="more"></a>
 <h2>问题描述</h2>
-<img src="https://raw.githubusercontent.com/tengdai722/tengdai722.github.io/master/img/leetcode_question/LC1201_1.png" width="75%" height="75%">
-<img src="https://raw.githubusercontent.com/tengdai722/tengdai722.github.io/master/img/leetcode_question/LC1201_2.png" width="75%" height="75%">
+<img src="https://raw.githubusercontent.com/tengdai722/tengdai722.github.io/master/img/leetcode_question/LC1202_1.png" width="75%" height="75%">
+<img src="https://raw.githubusercontent.com/tengdai722/tengdai722.github.io/master/img/leetcode_question/LC1202_2.png" width="75%" height="75%">
+<img src="https://raw.githubusercontent.com/tengdai722/tengdai722.github.io/master/img/leetcode_question/LC1202_3.png" width="75%" height="75%">
 <h2>解题思路</h2>
-<p>丑数2的升级版，又略有不同。之前的丑数都是找约数只是给定数字的数，而这次是只要能整除给定数字就可以，所以算是有一些区别。一开始用丑数2的思路一个个判断和找，果然超时了。既然是找个数，那能不能提前统计一下满足条件的数的个数呢，即给定一个数，小于等于这个数且能被给定3个数中任意一个数整除的数有多少呢？举例子，比如12，小于等于12，且能被2，3，4中任意一个整除的数有几个？这就用到了集合的<a href="https://zh.wikipedia.org/wiki/%E6%8E%92%E5%AE%B9%E5%8E%9F%E7%90%86" target="_blank" rel="noopener">容斥原理</a>。即我们要求的满足条件数的个数，等于能被2整除的数 + 能被3整除的数 + 能被4整除的数 - 能被2，3同时整除的数 - 能被2，4同时整除的数 - 能被3，4同时整除的数 + 能被2，3，4同时整除的的数。如何求能同时被两个数整除的数呢？这里需要用到最小公倍数的概念，即想要求能被a和b同时整除的，且小于等于N的数的个数，做法是找到a和b的最小公倍数ab，之后N/ab就是所求的数。而如何求最小公倍数又要用到最大公约数的概念。a和b的最小公倍数就是axb/gcd(a, b)，其中gcd(a, b)即代表a和b的最大公约数。再然后，就是如何求最大公约数了，一个算法必备知识：<a href="https://zh.wikipedia.org/wiki/%E8%BC%BE%E8%BD%89%E7%9B%B8%E9%99%A4%E6%B3%95" target="_blank" rel="noopener">辗转相除法</a>。</p>
-<p>上述过程可以求得给定一个数，小于等于这个数且能被给定3个数中任意一个数整除的数的个数。题目是要求第n个，而我们知道小于等于任意数有多少个，这就是典型的二分查找变种问题。好在题目给了结果的范围[1, 2000000000]，那么我们只要在这之间进行二分查找就好了。注意这里是找到满足条件的左边界问题，所以写法上要注意左右指针的取值。同时为了避免overflow，整个过程都是用长整型进行运算。</p>
+<p>看到pair有的时候潜意识就会有种反射会想到图。具体怎么想到的呢？通过读题我们可以知道同一个位置可以和多个位置进行互换，那么通过足够多的互换，只要是连在一起的位置就都可以互相替换。也就是说互换的位置是可以传递的。既然如此，首先我们要知道哪些位置是互相连通的，也就是说，我们要找到所有“连在一起”的位置。想到这就更自然的往连通图和union find的方向思考了。</p>
+<p>如果我们通过union find找到了所有连在一起的位置，那么接下来用贪心的思维直接去找这个位置字典序最小的字母就好。其实这里需要用数学归纳法证明一下如果n个位置可以连通互换，那么这n个位置的字母可以组成长度为n的全排列。也就是说，直接贪心是一定可以组成我们想要的字典序最小的排列的。最后对于每一个连通子图，把图里面的字母存到优先队列里就可以了，每次只拿最小的，那么当所有字母取完之后就是我们想要的最优答案。</p>
+<p>这道题真的是非常好的一道题，逻辑思维，图，哈希表，和优先队列，全都考到了。</p>
 <h2>Java代码</h2>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">long</span> ab;</span><br><span class="line">    <span class="keyword">long</span> ac;</span><br><span class="line">    <span class="keyword">long</span> bc;</span><br><span class="line">    <span class="keyword">long</span> abc;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">nthUglyNumber</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span> a, <span class="keyword">int</span> b, <span class="keyword">int</span> c)</span> </span>&#123;</span><br><span class="line">        ab = lcm(a, b);</span><br><span class="line">        ac = lcm(a, c);</span><br><span class="line">        bc = lcm(b, c);</span><br><span class="line">        abc = lcm(ab, c);</span><br><span class="line">        <span class="keyword">long</span> l = <span class="number">0</span>, r = <span class="number">2000000000</span>;</span><br><span class="line">        <span class="keyword">while</span> (l &lt; r) &#123;</span><br><span class="line">            <span class="keyword">long</span> mid = (l + r) / <span class="number">2</span>;</span><br><span class="line">            <span class="keyword">long</span> res = count(mid, a, b ,c);</span><br><span class="line">            <span class="keyword">if</span> (res &lt; n) &#123;</span><br><span class="line">                l = mid + <span class="number">1</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                r = mid;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> (<span class="keyword">int</span>)r;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">long</span> <span class="title">gcd</span><span class="params">(<span class="keyword">long</span> a, <span class="keyword">long</span> b)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (b == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> a;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> gcd(b, a % b);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">long</span> <span class="title">lcm</span><span class="params">(<span class="keyword">long</span> a, <span class="keyword">long</span> b)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> a*b / gcd(a, b);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">long</span> <span class="title">count</span><span class="params">(<span class="keyword">long</span> n, <span class="keyword">long</span> a, <span class="keyword">long</span> b, <span class="keyword">long</span> c)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> n/a + n/b + n/c - n/ab - n/bc - n/ac + n/abc;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span>[] id;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">smallestStringWithSwaps</span><span class="params">(String s, List&lt;List&lt;Integer&gt;&gt; pairs)</span> </span>&#123;</span><br><span class="line">        id = <span class="keyword">new</span> <span class="keyword">int</span>[s.length()];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; id.length; i++) &#123;</span><br><span class="line">            id[i] = i;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> (List&lt;Integer&gt; pair : pairs) &#123;</span><br><span class="line">            union(pair.get(<span class="number">0</span>), pair.get(<span class="number">1</span>));</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        HashMap&lt;Integer, PriorityQueue&lt;Character&gt;&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; id.length; i++) &#123;</span><br><span class="line">            <span class="keyword">int</span> root = find(i);</span><br><span class="line">            id[i] = root;</span><br><span class="line">            <span class="keyword">if</span> (!map.containsKey(root)) &#123;</span><br><span class="line">                map.put(root, <span class="keyword">new</span> PriorityQueue&lt;Character&gt;());</span><br><span class="line">            &#125;</span><br><span class="line">            map.get(root).add(s.charAt(i));</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        StringBuilder sb = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; id.length; i++) &#123;</span><br><span class="line">            sb.append(map.get(id[i]).poll());</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> sb.toString();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">int</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> p)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (id[p] == p) <span class="keyword">return</span> p;</span><br><span class="line">        <span class="keyword">int</span> q = find(id[p]);</span><br><span class="line">        id[p] = q;</span><br><span class="line">        <span class="keyword">return</span> q;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">union</span><span class="params">(<span class="keyword">int</span> p, <span class="keyword">int</span> q)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> pId = find(p);</span><br><span class="line">        <span class="keyword">int</span> qId = find(q);</span><br><span class="line">        <span class="keyword">if</span> (pId == qId) <span class="keyword">return</span>;</span><br><span class="line">        id[pId] = qId;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2>相关问题</h2>
 <p><a href></a></p>
 
@@ -308,16 +311,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2019/09/22/LeetCode-1202-Smallest-String-With-Swaps/">
-                    LeetCode 1202 Smallest String With Swaps
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2019/09/21/LeetCode-18-4Sum/">
-                    LeetCode 18 4Sum
+                <a href="/2019/09/22/LeetCode-1201-Ugly-Number-III/">
+                    LeetCode 1201 Ugly Number III
                 </a>
             </div>
         
@@ -342,7 +339,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"LeetCode 1201 Ugly Number III　| TD　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"LeetCode 1202 Smallest String With Swaps　| TD　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -361,8 +358,8 @@
     <div id="disqus_thread"></div>
     <script>
         var disqus_config = function(){
-            this.page.url = 'http://yoursite.com/2019/09/22/LeetCode-1201-Ugly-Number-III/';
-            this.page.identifier = '2019/09/22/LeetCode-1201-Ugly-Number-III/';
+            this.page.url = 'http://yoursite.com/2019/09/22/LeetCode-1202-Smallest-String-With-Swaps/';
+            this.page.identifier = '2019/09/22/LeetCode-1202-Smallest-String-With-Swaps/';
         };
         var loadComment = function(){
             var d = document, s = d.createElement('script');
@@ -384,15 +381,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2019/09/22/LeetCode-1202-Smallest-String-With-Swaps/" title="上一篇: LeetCode 1202 Smallest String With Swaps">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2019/09/21/LeetCode-18-4Sum/" title="下一篇: LeetCode 18 4Sum">
+            <a href="/2019/09/22/LeetCode-1201-Ugly-Number-III/" title="下一篇: LeetCode 1201 Ugly Number III">
                 <i class="fa fa-angle-right"></i>
             </a>
         
