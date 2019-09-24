@@ -24,7 +24,7 @@
 <meta property="og:description" content="LeetCode 170 Two Sum III - Data structure design | 问题描述 | 解题思路 | Java代码 | 相关问题">
 <meta property="og:locale" content="ch">
 <meta property="og:image" content="https://raw.githubusercontent.com/tengdai722/tengdai722.github.io/master/img/leetcode_question/LC0170.png">
-<meta property="og:updated_time" content="2019-09-23T22:35:11.970Z">
+<meta property="og:updated_time" content="2019-09-23T22:37:37.630Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode 170 Two Sum III - Data structure design">
 <meta name="twitter:description" content="LeetCode 170 Two Sum III - Data structure design | 问题描述 | 解题思路 | Java代码 | 相关问题">
@@ -306,6 +306,12 @@
 
     <nav id="article-nav">
         
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2019/09/24/LeetCode-560-Subarray-Sum-Equals-K/">
+                    LeetCode 560 Subarray Sum Equals K
+                </a>
+            </div>
+        
         
             <div id="article-nav-older" class="article-nav-title">
                 <a href="/2019/09/23/LeetCode-167-Two-Sum-II-Input-array-is-sorted/">
@@ -376,7 +382,9 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2019/09/24/LeetCode-560-Subarray-Sum-Equals-K/" title="上一篇: LeetCode 560 Subarray Sum Equals K">
+                <i class="fa fa-angle-left"></i>
+            </a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
@@ -388,7 +396,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/09/23/LeetCode-170-Two-Sum-III-Data-structure-design/">LeetCode 170 Two Sum III - Data structure design</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/23/LeetCode-167-Two-Sum-II-Input-array-is-sorted/">LeetCode 167 Two Sum II - Input array is sorted</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/23/LeetCode-1200-Minimum-Absolute-Difference/">LeetCode 1200 Minimum Absolute Difference</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/22/LeetCode-1202-Smallest-String-With-Swaps/">LeetCode 1202 Smallest String With Swaps</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/22/LeetCode-1201-Ugly-Number-III/">LeetCode 1201 Ugly Number III</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/21/LeetCode-18-4Sum/">LeetCode 18 4Sum</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/21/LeetCode-15-3Sum/">LeetCode 15 3Sum</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/21/LeetCode-刷题总结/">LeetCode 刷题总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/20/LeetCode-1-Two-Sum/">LeetCode 1 Two Sum</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/17/从零开始Python实现卷积神经网络识别手写数字-MNIST/">从零开始Python实现卷积神经网络识别手写数字(MNIST)</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/09/24/LeetCode-560-Subarray-Sum-Equals-K/">LeetCode 560 Subarray Sum Equals K</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/23/LeetCode-170-Two-Sum-III-Data-structure-design/">LeetCode 170 Two Sum III - Data structure design</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/23/LeetCode-167-Two-Sum-II-Input-array-is-sorted/">LeetCode 167 Two Sum II - Input array is sorted</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/23/LeetCode-1200-Minimum-Absolute-Difference/">LeetCode 1200 Minimum Absolute Difference</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/22/LeetCode-1202-Smallest-String-With-Swaps/">LeetCode 1202 Smallest String With Swaps</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/22/LeetCode-1201-Ugly-Number-III/">LeetCode 1201 Ugly Number III</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/21/LeetCode-18-4Sum/">LeetCode 18 4Sum</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/21/LeetCode-15-3Sum/">LeetCode 15 3Sum</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/21/LeetCode-刷题总结/">LeetCode 刷题总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/20/LeetCode-1-Two-Sum/">LeetCode 1 Two Sum</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/17/从零开始Python实现卷积神经网络识别手写数字-MNIST/">从零开始Python实现卷积神经网络识别手写数字(MNIST)</a></li></ul>
 
 
 
@@ -451,6 +459,27 @@
 
 
 
+
+
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 
 
 <div class="scroll" id="scroll">
