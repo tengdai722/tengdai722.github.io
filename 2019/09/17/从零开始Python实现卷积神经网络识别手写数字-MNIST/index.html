@@ -26,7 +26,7 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/tengdai722/tengdai722.github.io/master/img/blog_pic/cnn_loss.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/tengdai722/tengdai722.github.io/master/img/blog_pic/cnn_train_acc.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/tengdai722/tengdai722.github.io/master/img/blog_pic/cnn_test_acc.png">
-<meta property="og:updated_time" content="2019-09-25T16:26:36.508Z">
+<meta property="og:updated_time" content="2019-09-25T16:29:34.461Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="从零开始Python实现卷积神经网络识别手写数字(MNIST)">
 <meta name="twitter:description" content="Python手写CNN | CNN推导 | Python代码 | MNIST数字识别">
@@ -292,8 +292,7 @@
           
         <p>Python手写CNN | CNN推导 | Python代码 | MNIST数字识别</p>
 <a id="more"></a>
-<p>卷积神经网络(Convolution Neural Network)是时下很流行的一种神经网络。时至今日我们已有很多框架可以进行卷积神经网络的构建和训练，但是很多时候<br>
-只知其表不知其里。这边文章来推导一下卷积神经网络的相关公式，并用只用Python(numpy)来实现一个简单的卷积神经网络对MNIST数据集进行训练和预测。</p>
+<p>卷积神经网络(Convolution Neural Network)是时下很流行的一种神经网络。时至今日我们已有很多框架可以进行卷积神经网络的构建和训练，但是很多时候只知其表不知其里。这篇文章来推导一下卷积神经网络的相关公式，并用只用Python(numpy)来实现一个简单的卷积神经网络对MNIST数据集进行训练和预测。</p>
 <h2>数学推导</h2>
 <p>作为卷积神经网络的重要操作，我们首先定义卷积运算。这里不再详细介绍什么是深度神经网络里面的卷积，我们就把它当做一个filter操作。多通道卷积操作定义如下：<br>
 $$(X * K)_{i, j, c}=\sum_{m = 0}^{k_y - 1}\sum_{n = 0}^{k_x - 1}K_{m, n, c}X_{i + m, j + n}\qquad\qquad(1)$$<br>
