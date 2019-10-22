@@ -8,7 +8,7 @@
       <link href="/2019/10/21/LeetCode-1229-Meeting-Scheduler/"/>
       <url>/2019/10/21/LeetCode-1229-Meeting-Scheduler/</url>
       
-        <content type="html"><![CDATA[<p>LeetCode 1229 Meeting Scheduler | 问题描述 | 解题思路 | Java代码 | 相关问题</p><a id="more"></a><h2>问题描述</h2><img src="https://raw.githubusercontent.com/tengdai722/tengdai722.github.io/master/img/leetcode_question/LC1229_1.png" width="75%" height="75%"><img src="https://raw.githubusercontent.com/tengdai722/tengdai722.github.io/master/img/leetcode_question/LC1229_2.png" width="75%" height="75%"><h2>解题思路</h2><p>一开始读错了题目，没有注意到求的是可以通过转换得到答案的substring的最小长度。这个题目本质上和替换字符串没有任何区别，先求出需要有多少个字符被替换，也就是大于字符串长度/4的字符个数，之后通过sliding window来求出最小的字符串。</p><h2>Java代码</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">balancedString</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] cnt = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">128</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">char</span> c : s.toCharArray()) &#123;</span><br><span class="line">            cnt[c]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> n = s.length(), res = n, l = <span class="number">0</span>, target = n / <span class="number">4</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> r = <span class="number">0</span>; r &lt; s.length(); r++) &#123;</span><br><span class="line">            cnt[s.charAt(r)]--;</span><br><span class="line">            <span class="keyword">while</span> (l &lt; n &amp;&amp; cnt[<span class="string">'Q'</span>] &lt;= target &amp;&amp; cnt[<span class="string">'W'</span>] &lt;= target &amp;&amp; cnt[<span class="string">'E'</span>] &lt;= target &amp;&amp; cnt[<span class="string">'R'</span>] &lt;= target) &#123;</span><br><span class="line">                res = Math.min(res, r - l + <span class="number">1</span>);</span><br><span class="line">                ++cnt[s.charAt(l++)];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2>相关问题</h2><p><a href></a></p>]]></content>
+        <content type="html"><![CDATA[<p>LeetCode 1229 Meeting Scheduler | 问题描述 | 解题思路 | Java代码 | 相关问题</p><a id="more"></a><h2>问题描述</h2><img src="https://raw.githubusercontent.com/tengdai722/tengdai722.github.io/master/img/leetcode_question/LC1229_1.png" width="75%" height="75%"><img src="https://raw.githubusercontent.com/tengdai722/tengdai722.github.io/master/img/leetcode_question/LC1229_2.png" width="75%" height="75%"><h2>解题思路</h2><p>和之前的merge interval差不多的思路。把两个输入数组按照start time排序后，依次扫过，直到找到满足条件的答案，否则返回空。</p><h2>Java代码</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;Integer&gt; <span class="title">minAvailableDuration</span><span class="params">(<span class="keyword">int</span>[][] slots1, <span class="keyword">int</span>[][] slots2, <span class="keyword">int</span> duration)</span> </span>&#123;</span><br><span class="line">        List&lt;Integer&gt; res = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        Arrays.sort(slots1, (a, b) -&gt; a[<span class="number">0</span>] - b[<span class="number">0</span>]);</span><br><span class="line">        Arrays.sort(slots2, (a, b) -&gt; a[<span class="number">0</span>] - b[<span class="number">0</span>]);</span><br><span class="line">        <span class="keyword">int</span> s1 = <span class="number">0</span>, s2 = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (s1 &lt; slots1.length &amp;&amp; s2 &lt; slots2.length) &#123;</span><br><span class="line">            <span class="keyword">int</span> start = Math.max(slots1[s1][<span class="number">0</span>], slots2[s2][<span class="number">0</span>]);</span><br><span class="line">            <span class="keyword">int</span> end = Math.min(slots1[s1][<span class="number">1</span>], slots2[s2][<span class="number">1</span>]);</span><br><span class="line">            <span class="keyword">if</span> (start + duration &lt;= end) &#123;</span><br><span class="line">                <span class="keyword">return</span> Arrays.asList(start, start + duration);</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (slots1[s1][<span class="number">1</span>] &lt; slots2[s2][<span class="number">1</span>]) &#123;</span><br><span class="line">                s1++;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                s2++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2>相关问题</h2><p><a href></a></p>]]></content>
       
       
       <categories>
@@ -53,9 +53,9 @@
             
             <tag> Medium </tag>
             
-            <tag> Two Pointers </tag>
-            
             <tag> String </tag>
+            
+            <tag> Two Pointers </tag>
             
         </tags>
       
@@ -113,9 +113,9 @@
             
             <tag> LeetCode </tag>
             
-            <tag> Medium </tag>
-            
             <tag> Math </tag>
+            
+            <tag> Medium </tag>
             
             <tag> Linked List </tag>
             
@@ -268,9 +268,9 @@
             
             <tag> Easy </tag>
             
-            <tag> Two Pointers </tag>
-            
             <tag> Binary Search </tag>
+            
+            <tag> Two Pointers </tag>
             
         </tags>
       
@@ -328,9 +328,9 @@
             
             <tag> Array </tag>
             
-            <tag> Union Find </tag>
-            
             <tag> Medium </tag>
+            
+            <tag> Union Find </tag>
             
         </tags>
       
@@ -357,11 +357,11 @@
             
             <tag> LeetCode </tag>
             
-            <tag> Medium </tag>
-            
             <tag> Math </tag>
             
             <tag> Binary Search </tag>
+            
+            <tag> Medium </tag>
             
         </tags>
       
