@@ -15,14 +15,20 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="分类主题">
-<meta property="og:url" content="http://yoursite.com/categories/index.html">
+<meta name="description" content="LeetCode 315 Count of Smaller Numbers After Self | 问题描述 | 解题思路 | Java代码 | 相关问题">
+<meta name="keywords" content="LeetCode,Sort,Binary Search,Divide and Conquer,Binary Indexed Tree,Segment Tree,Hard">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LeetCode 315 Count of Smaller Numbers After Self">
+<meta property="og:url" content="http://yoursite.com/2019/10/26/LeetCode-315-Count-of-Smaller-Numbers-After-Self/index.html">
 <meta property="og:site_name" content="TD">
+<meta property="og:description" content="LeetCode 315 Count of Smaller Numbers After Self | 问题描述 | 解题思路 | Java代码 | 相关问题">
 <meta property="og:locale" content="ch">
-<meta property="og:updated_time" content="2019-09-21T18:25:54.493Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/tengdai722/tengdai722.github.io/master/img/leetcode_question/LC315.png">
+<meta property="og:updated_time" content="2019-10-26T15:18:01.594Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="分类主题">
+<meta name="twitter:title" content="LeetCode 315 Count of Smaller Numbers After Self">
+<meta name="twitter:description" content="LeetCode 315 Count of Smaller Numbers After Self | 问题描述 | 解题思路 | Java代码 | 相关问题">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/tengdai722/tengdai722.github.io/master/img/leetcode_question/LC315.png">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -54,7 +60,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>分类主题 | TD</title>
+<title>LeetCode 315 Count of Smaller Numbers After Self | TD</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -64,7 +70,7 @@
         fancybox: true,
         animate: true,
         isHome: false,
-        isPost: false,
+        isPost: true,
         isArchive: false,
         isTag: false,
         isCategory: false,
@@ -238,11 +244,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-LeetCode-315-Count-of-Smaller-Numbers-After-Self" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/categories/index.html" class="article-date">
-      <time datetime="2019-09-21T18:25:04.000Z" itemprop="datePublished">2019-09-21</time>
+      <a href="/2019/10/26/LeetCode-315-Count-of-Smaller-Numbers-After-Self/" class="article-date">
+      <time datetime="2019-10-26T15:11:32.000Z" itemprop="datePublished">2019-10-26</time>
 </a>
 
 
@@ -257,7 +263,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      分类主题
+      LeetCode 315 Count of Smaller Numbers After Self
     </h1>
   
 
@@ -265,8 +271,16 @@
       
       <div class="article-info article-info-post">
         
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
+    </div>
+
 
         
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Binary-Indexed-Tree/">Binary Indexed Tree</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Binary-Search/">Binary Search</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Divide-and-Conquer/">Divide and Conquer</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hard/">Hard</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Segment-Tree/">Segment Tree</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sort/">Sort</a></li></ul>
+    </div>
+
         <div class="clearfix"></div>
       </div>
       
@@ -274,26 +288,17 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-              <style>
-    .article-meta { display: none; }
-    #container .article .article-title { padding-right: 0; }
-    .article-header {
-        padding: 0;
-        padding-top: 26px;
-        border-left: none;
-        text-align: center;
-    }
-    .article-header:hover { border-left: none; }
-    .article-title { font-size: 1.6em }
-    .article-entry hr { margin: 0;}
-    .article-meta,
-    #container .article-info-post.article-info { display: none;}
-    #container .article .article-title { padding: 0; }
-</style>
+        <p>LeetCode 315 Count of Smaller Numbers After Self | 问题描述 | 解题思路 | Java代码 | 相关问题</p>
+<a id="more"></a>
+<h2>问题描述</h2>
+<img src="https://raw.githubusercontent.com/tengdai722/tengdai722.github.io/master/img/leetcode_question/LC315.png" width="75%" height="75%">
+<h2>解题思路</h2>
+<p>涉及比大小一般会想到的一些方法或者数据结构：二分查找，BST，排序。好像这三种方法在此题都可以用到。利用BST来构建具有特殊节点的二项查找树，即节点里存储比其值小的节点的个数。构建过程中，如果新插入节点值小于或等于根节点，那么根节点计数+1，并继续向左节点插入；反之，向右查找，并将查找过程所扫过的所有节点的计数都加到当前的计数内（要记得包括每次扫到的根节点）。</p>
+<h2>Java代码</h2>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Node</span> </span>&#123;</span><br><span class="line">        Node left = <span class="keyword">null</span>;</span><br><span class="line">        Node right = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">int</span> smaller = <span class="number">0</span>, val = <span class="number">0</span>;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">Node</span> <span class="params">(<span class="keyword">int</span> val)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">this</span>.val = val;</span><br><span class="line">            <span class="keyword">this</span>.smaller = <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">int</span> <span class="title">insert</span><span class="params">(Node root, <span class="keyword">int</span> val)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (val &lt;= root.val) &#123;</span><br><span class="line">                root.smaller++;</span><br><span class="line">                <span class="keyword">if</span> (root.left != <span class="keyword">null</span>) &#123;</span><br><span class="line">                    root = root.left;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    root.left = <span class="keyword">new</span> Node(val);</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                count += root.smaller + <span class="number">1</span>;</span><br><span class="line">                <span class="keyword">if</span> (root.right != <span class="keyword">null</span>) &#123;</span><br><span class="line">                    root = root.right;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    root.right = <span class="keyword">new</span> Node(val);</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> count;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;Integer&gt; <span class="title">countSmaller</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (nums == <span class="keyword">null</span> || nums.length == <span class="number">0</span>) <span class="keyword">return</span> <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">        Node root = <span class="keyword">new</span> Node(nums[nums.length - <span class="number">1</span>]);</span><br><span class="line">        LinkedList&lt;Integer&gt; res = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">        res.add(<span class="number">0</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = nums.length - <span class="number">2</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">            res.addFirst(insert(root, nums[i]));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2>相关问题</h2>
+<p><a href></a></p>
 
-
-          
-        
       
     </div>
     
@@ -301,6 +306,17 @@
   
     
 
+
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2019/10/25/LeetCode-1057-Campus-Bikes/">
+                    LeetCode 1057 Campus Bikes
+                </a>
+            </div>
+        
+    </nav>
 
   
 </article>
@@ -321,7 +337,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"分类主题　| TD　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"LeetCode 315 Count of Smaller Numbers After Self　| TD　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -334,6 +350,48 @@
 
 
 
+    
+        <section id="comments">
+    <style> aside.comment-bar { margin: auto 30px; }</style>
+    <div id="disqus_thread"></div>
+    <script>
+        var disqus_config = function(){
+            this.page.url = 'http://yoursite.com/2019/10/26/LeetCode-315-Count-of-Smaller-Numbers-After-Self/';
+            this.page.identifier = '2019/10/26/LeetCode-315-Count-of-Smaller-Numbers-After-Self/';
+        };
+        var loadComment = function(){
+            var d = document, s = d.createElement('script');
+            s.src = '//tengdai.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        }
+    </script>
+    
+    <script> loadComment(); </script>
+
+</section>
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2019/10/25/LeetCode-1057-Campus-Bikes/" title="下一篇: LeetCode 1057 Campus Bikes">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/10/26/LeetCode-315-Count-of-Smaller-Numbers-After-Self/">LeetCode 315 Count of Smaller Numbers After Self</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/25/LeetCode-1057-Campus-Bikes/">LeetCode 1057 Campus Bikes</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/21/LeetCode-1229-Meeting-Scheduler/">LeetCode 1229 Meeting Scheduler</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/21/LeetCode-1234-Replace-the-Substring-for-Balanced-String/">LeetCode 1234 Replace the Substring for Balanced String</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/21/LeetCode-1233-Remove-Sub-Folders-from-the-Filesystem/">LeetCode 1233 Remove Sub-Folders from the Filesystem</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/24/LeetCode-2-Add-Two-Numbers/">LeetCode 2 Add Two Numbers</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/24/LeetCode-1099-Two-Sum-Less-Than-K/">LeetCode 1099 Two Sum Less Than K</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/24/LeetCode-653-Two-Sum-IV-Input-is-a-BST/">LeetCode 653 Two Sum IV - Input is a BST</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/24/LeetCode-560-Subarray-Sum-Equals-K/">LeetCode 560 Subarray Sum Equals K</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/23/LeetCode-170-Two-Sum-III-Data-structure-design/">LeetCode 170 Two Sum III - Data structure design</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/23/LeetCode-167-Two-Sum-II-Input-array-is-sorted/">LeetCode 167 Two Sum II - Input array is sorted</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/23/LeetCode-1200-Minimum-Absolute-Difference/">LeetCode 1200 Minimum Absolute Difference</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/22/LeetCode-1202-Smallest-String-With-Swaps/">LeetCode 1202 Smallest String With Swaps</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/22/LeetCode-1201-Ugly-Number-III/">LeetCode 1201 Ugly Number III</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/21/LeetCode-18-4Sum/">LeetCode 18 4Sum</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/21/LeetCode-15-3Sum/">LeetCode 15 3Sum</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/21/LeetCode-刷题总结/">LeetCode 刷题总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/20/LeetCode-1-Two-Sum/">LeetCode 1 Two Sum</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/17/从零开始Python实现卷积神经网络识别手写数字-MNIST/">从零开始Python实现卷积神经网络识别手写数字(MNIST)</a></li></ul>
 
 
 
