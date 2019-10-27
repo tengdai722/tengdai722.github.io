@@ -25,7 +25,7 @@
 <meta property="og:locale" content="ch">
 <meta property="og:image" content="https://raw.githubusercontent.com/tengdai722/tengdai722.github.io/master/img/leetcode_question/LC1238_1.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/tengdai722/tengdai722.github.io/master/img/leetcode_question/LC1238_2.png">
-<meta property="og:updated_time" content="2019-10-27T20:23:57.383Z">
+<meta property="og:updated_time" content="2019-10-27T20:25:59.144Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode 1238 Circular Permutation in Binary Representation">
 <meta name="twitter:description" content="LeetCode 1238 Circular Permutation in Binary | 问题描述 | 解题思路 | Java代码 | 相关问题">
@@ -295,7 +295,7 @@
 <img src="https://raw.githubusercontent.com/tengdai722/tengdai722.github.io/master/img/leetcode_question/LC1238_1.png" width="75%" height="75%">
 <img src="https://raw.githubusercontent.com/tengdai722/tengdai722.github.io/master/img/leetcode_question/LC1238_2.png" width="75%" height="75%">
 <h2>解题思路</h2>
-<p>每一个数只差一bit，是一个格雷编码问题。首先要知道格雷编码一定是循环的，也就是说，只要保证每一个数都和前一个数只差一个bit，那么不管每一个数是变了哪一个bit，最后生成完所有数后，最后一个数和第一个数也只差了一个bit。n位格雷码总共有$2<sup>n$个数，那么如何找到和一个数只差1的数呢？利用位运算的异或来异或一个只有一位是1其他都是0的mask即可。这样的mask总共有$2</sup>n$，那么首先固定了start，再利用mask求得最后一个数，固定这两个数之后其他的数只要顺序生成即可。利用set排除已经生成的数，即可得到答案。</p>
+<p>每一个数只差一bit，是一个格雷编码问题。首先要知道格雷编码一定是循环的，也就是说，只要保证每一个数都和前一个数只差一个bit，那么不管每一个数是变了哪一个bit，最后生成完所有数后，最后一个数和第一个数也只差了一个bit。n位格雷码总共有$$2<sup>n$$个数，那么如何找到和一个数只差1的数呢？利用位运算的异或来异或一个只有一位是1其他都是0的mask即可。这样的mask总共有$$2</sup>n$$，那么首先固定了start，再利用mask求得最后一个数，固定这两个数之后其他的数只要顺序生成即可。利用set排除已经生成的数，即可得到答案。</p>
 <p>当然，还有更math一点的方法，讨论区利用下面的链接做到了一行解题，实在厉害。<br>
 <a href="https://cp-algorithms.com/algebra/gray-code.html" target="_blank" rel="noopener">https://cp-algorithms.com/algebra/gray-code.html</a><br>
 <a href="https://leetcode.com/problems/circular-permutation-in-binary-representation/discuss/414203/JavaC%2B%2BPython-4-line-Gray-Code" target="_blank" rel="noopener">https://leetcode.com/problems/circular-permutation-in-binary-representation/discuss/414203/JavaC%2B%2BPython-4-line-Gray-Code</a></p>
