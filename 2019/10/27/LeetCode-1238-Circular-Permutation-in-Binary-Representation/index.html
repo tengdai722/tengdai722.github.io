@@ -15,21 +15,21 @@
 
 
 
-<meta name="description" content="LeetCode 753 Cracking the Safe | 问题描述 | 解题思路 | Java代码 | 相关问题">
-<meta name="keywords" content="LeetCode,Math,Hard,Depth-first Search">
+<meta name="description" content="LeetCode 1238 Circular Permutation in Binary | 问题描述 | 解题思路 | Java代码 | 相关问题">
+<meta name="keywords" content="LeetCode,Medium,Math">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode 753 Cracking the Safe">
-<meta property="og:url" content="http://yoursite.com/2019/10/26/LeetCode-753-Cracking-the-Safe/index.html">
+<meta property="og:title" content="LeetCode 1238 Circular Permutation in Binary Representation">
+<meta property="og:url" content="http://yoursite.com/2019/10/27/LeetCode-1238-Circular-Permutation-in-Binary-Representation/index.html">
 <meta property="og:site_name" content="TD">
-<meta property="og:description" content="LeetCode 753 Cracking the Safe | 问题描述 | 解题思路 | Java代码 | 相关问题">
+<meta property="og:description" content="LeetCode 1238 Circular Permutation in Binary | 问题描述 | 解题思路 | Java代码 | 相关问题">
 <meta property="og:locale" content="ch">
-<meta property="og:image" content="https://raw.githubusercontent.com/tengdai722/tengdai722.github.io/master/img/leetcode_question/LC753_1.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/tengdai722/tengdai722.github.io/master/img/leetcode_question/LC753_2.png">
-<meta property="og:updated_time" content="2019-10-26T21:38:12.000Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/tengdai722/tengdai722.github.io/master/img/leetcode_question/LC1238_1.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/tengdai722/tengdai722.github.io/master/img/leetcode_question/LC1238_2.png">
+<meta property="og:updated_time" content="2019-10-27T20:21:33.364Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode 753 Cracking the Safe">
-<meta name="twitter:description" content="LeetCode 753 Cracking the Safe | 问题描述 | 解题思路 | Java代码 | 相关问题">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/tengdai722/tengdai722.github.io/master/img/leetcode_question/LC753_1.png">
+<meta name="twitter:title" content="LeetCode 1238 Circular Permutation in Binary Representation">
+<meta name="twitter:description" content="LeetCode 1238 Circular Permutation in Binary | 问题描述 | 解题思路 | Java代码 | 相关问题">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/tengdai722/tengdai722.github.io/master/img/leetcode_question/LC1238_1.png">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -61,7 +61,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>LeetCode 753 Cracking the Safe | TD</title>
+<title>LeetCode 1238 Circular Permutation in Binary Representation | TD</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -245,11 +245,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-LeetCode-753-Cracking-the-Safe" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-LeetCode-1238-Circular-Permutation-in-Binary-Representation" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/10/26/LeetCode-753-Cracking-the-Safe/" class="article-date">
-      <time datetime="2019-10-26T21:08:01.000Z" itemprop="datePublished">2019-10-26</time>
+      <a href="/2019/10/27/LeetCode-1238-Circular-Permutation-in-Binary-Representation/" class="article-date">
+      <time datetime="2019-10-27T20:03:38.100Z" itemprop="datePublished">2019-10-27</time>
 </a>
 
 
@@ -264,7 +264,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      LeetCode 753 Cracking the Safe
+      LeetCode 1238 Circular Permutation in Binary Representation
     </h1>
   
 
@@ -279,7 +279,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Depth-first-Search/">Depth-first Search</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hard/">Hard</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Math/">Math</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Math/">Math</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Medium/">Medium</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -289,15 +289,18 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>LeetCode 753 Cracking the Safe | 问题描述 | 解题思路 | Java代码 | 相关问题</p>
+        <p>LeetCode 1238 Circular Permutation in Binary | 问题描述 | 解题思路 | Java代码 | 相关问题</p>
 <a id="more"></a>
 <h2>问题描述</h2>
-<img src="https://raw.githubusercontent.com/tengdai722/tengdai722.github.io/master/img/leetcode_question/LC753_1.png" width="75%" height="75%">
-<img src="https://raw.githubusercontent.com/tengdai722/tengdai722.github.io/master/img/leetcode_question/LC753_2.png" width="75%" height="75%">
+<img src="https://raw.githubusercontent.com/tengdai722/tengdai722.github.io/master/img/leetcode_question/LC1238_1.png" width="75%" height="75%">
+<img src="https://raw.githubusercontent.com/tengdai722/tengdai722.github.io/master/img/leetcode_question/LC1238_2.png" width="75%" height="75%">
 <h2>解题思路</h2>
-<p>首先长度为n，每一位范围为k的密码总共有$k^n$种组合，只要最后答案包括所有的组合即可。既然要找最短的，那么就要让每下一种组合尽可能的多利用前一个组合的位。利用DFS+back tracking可以依次的每次只遍历新的最后一位，直到所有的组合都已经遍历到。</p>
+<p>每一个数只差一bit，是一个格雷编码(Gray Code)问题。首先要知道格雷编码一定是循环的，也就是说，只要保证每一个数都和前一个数只差一个bit，那么不管每一个数是变了哪一个bit，最后生成完所有数后，最后一个数和第一个数也只差了一个bit。n位格雷码总共有$2<sup>n$个数，那么如何找到和一个数只差1的数呢？利用位运算的异或(</sup>)来异或一个只有一位是1其他都是0的mask即可。这样的mask总共有$2^n$，那么首先固定了start，再利用mask求得最后一个数，固定这两个数之后其他的数只要顺序生成即可。利用set排除已经生成的数，即可得到答案。</p>
+<p>当然，还有更math一点的方法，讨论区利用下面的链接做到了一行解题，实在厉害。<br>
+<a href="https://cp-algorithms.com/algebra/gray-code.html" target="_blank" rel="noopener">https://cp-algorithms.com/algebra/gray-code.html</a><br>
+<a href="https://leetcode.com/problems/circular-permutation-in-binary-representation/discuss/414203/JavaC%2B%2BPython-4-line-Gray-Code" target="_blank" rel="noopener">https://leetcode.com/problems/circular-permutation-in-binary-representation/discuss/414203/JavaC%2B%2BPython-4-line-Gray-Code</a></p>
 <h2>Java代码</h2>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> total = <span class="number">0</span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">crackSafe</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        total = (<span class="keyword">int</span>)Math.pow(k, n);</span><br><span class="line">        Set&lt;String&gt; set = <span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line">        StringBuilder res = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">            res.append(<span class="string">"0"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        set.add(res.toString());</span><br><span class="line">        dfs(res, n, k, set, res.toString());</span><br><span class="line">        <span class="keyword">return</span> res.toString();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">dfs</span><span class="params">(StringBuilder res, <span class="keyword">int</span> n, <span class="keyword">int</span> k, Set&lt;String&gt; set, String str)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (set.size() == total) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        String nextPrefix = str.substring(<span class="number">1</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; k; i++) &#123;</span><br><span class="line">            String next = nextPrefix + i;</span><br><span class="line">            <span class="keyword">if</span> (!set.contains(next)) &#123;</span><br><span class="line">                set.add(next);</span><br><span class="line">                res.append(i + <span class="string">""</span>);</span><br><span class="line">                dfs(res, n, k, set, next);</span><br><span class="line">                <span class="keyword">if</span> (set.size() == total) &#123;</span><br><span class="line">                    <span class="keyword">return</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                set.remove(next);</span><br><span class="line">                res.deleteCharAt(res.length() - <span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    Set&lt;Integer&gt; set = <span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;Integer&gt; <span class="title">circularPermutation</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span> start)</span> </span>&#123;</span><br><span class="line">        List&lt;Integer&gt; res = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        set.add(start);</span><br><span class="line">        <span class="keyword">int</span> prev = start;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = (<span class="number">1</span> &lt;&lt; n) - <span class="number">1</span>; i &gt;= <span class="number">1</span>; i--) &#123;</span><br><span class="line">            <span class="keyword">int</span> next = find(prev, n);</span><br><span class="line">            res.add(next);</span><br><span class="line">            set.add(next);</span><br><span class="line">            prev = next;</span><br><span class="line">        &#125;</span><br><span class="line">        res.add(start);</span><br><span class="line">        Collections.reverse(res);</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">int</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> num, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; (<span class="number">1</span> &lt;&lt; n); i++) &#123;</span><br><span class="line">            <span class="keyword">int</span> mask = <span class="number">1</span> &lt;&lt; i;</span><br><span class="line">            res = mask ^ num;</span><br><span class="line">            <span class="keyword">if</span> (!set.contains(res)) &#123;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2>相关问题</h2>
 <p><a href></a></p>
 
@@ -311,16 +314,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2019/10/27/LeetCode-1238-Circular-Permutation-in-Binary-Representation/">
-                    LeetCode 1238 Circular Permutation in Binary Representation
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2019/10/26/LeetCode-315-Count-of-Smaller-Numbers-After-Self/">
-                    LeetCode 315 Count of Smaller Numbers After Self
+                <a href="/2019/10/26/LeetCode-753-Cracking-the-Safe/">
+                    LeetCode 753 Cracking the Safe
                 </a>
             </div>
         
@@ -345,7 +342,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"LeetCode 753 Cracking the Safe　| TD　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"LeetCode 1238 Circular Permutation in Binary Representation　| TD　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -364,8 +361,8 @@
     <div id="disqus_thread"></div>
     <script>
         var disqus_config = function(){
-            this.page.url = 'http://yoursite.com/2019/10/26/LeetCode-753-Cracking-the-Safe/';
-            this.page.identifier = '2019/10/26/LeetCode-753-Cracking-the-Safe/';
+            this.page.url = 'http://yoursite.com/2019/10/27/LeetCode-1238-Circular-Permutation-in-Binary-Representation/';
+            this.page.identifier = '2019/10/27/LeetCode-1238-Circular-Permutation-in-Binary-Representation/';
         };
         var loadComment = function(){
             var d = document, s = d.createElement('script');
@@ -387,15 +384,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2019/10/27/LeetCode-1238-Circular-Permutation-in-Binary-Representation/" title="上一篇: LeetCode 1238 Circular Permutation in Binary Representation">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2019/10/26/LeetCode-315-Count-of-Smaller-Numbers-After-Self/" title="下一篇: LeetCode 315 Count of Smaller Numbers After Self">
+            <a href="/2019/10/26/LeetCode-753-Cracking-the-Safe/" title="下一篇: LeetCode 753 Cracking the Safe">
                 <i class="fa fa-angle-right"></i>
             </a>
         
