@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head><meta name="generator" content="Hexo 3.9.0">
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="TD">
+
+
+
+<meta name="description" content="LeetCode 1352 Product of the Last K Numbers | 问题描述 | 解题思路 | Java代码 | 相关问题">
+<meta name="keywords" content="LeetCode,Medium,Array,Design">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LeetCode 1352 Product of the Last K Numbers">
+<meta property="og:url" content="http://yoursite.com/2020/02/20/LeetCode-1352-Product-of-the-Last-K-Numbers/index.html">
+<meta property="og:site_name" content="TD">
+<meta property="og:description" content="LeetCode 1352 Product of the Last K Numbers | 问题描述 | 解题思路 | Java代码 | 相关问题">
+<meta property="og:locale" content="ch">
+<meta property="og:image" content="https://raw.githubusercontent.com/tengdai722/tengdai722.github.io/master/img/leetcode_question/LC1352_1.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/tengdai722/tengdai722.github.io/master/img/leetcode_question/LC1352_2.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/tengdai722/tengdai722.github.io/master/img/leetcode_question/LC1352_3.png">
+<meta property="og:updated_time" content="2020-02-20T03:14:48.237Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="LeetCode 1352 Product of the Last K Numbers">
+<meta name="twitter:description" content="LeetCode 1352 Product of the Last K Numbers | 问题描述 | 解题思路 | Java代码 | 相关问题">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/tengdai722/tengdai722.github.io/master/img/leetcode_question/LC1352_1.png">
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="TD" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>LeetCode 1352 Product of the Last K Numbers | TD</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: true
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+</head></html>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">TD</a></h1>
+        </hgroup>
+
+        
+
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/深度学习">深度学习</a></li>
+                        
+                            <li><a href="/tags/LeetCode">刷题LeetCode</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Array/">Array</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Binary-Indexed-Tree/">Binary Indexed Tree</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Binary-Search/">Binary Search</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Depth-first-Search/">Depth-first Search</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Design/">Design</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Divide-and-Conquer/">Divide and Conquer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Easy/">Easy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Greedy/">Greedy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hard/">Hard</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hash-Table/">Hash Table</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LeetCode/">LeetCode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Line-Sweep/">Line Sweep</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linked-List/">Linked List</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Math/">Math</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Medium/">Medium</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Segment-Tree/">Segment Tree</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sort/">Sort</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/String/">String</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tree/">Tree</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Two-Pointers/">Two Pointers</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Union-Find/">Union Find</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/深度学习/">深度学习</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+
+                
+                
+                <section class="switch-part switch-part3">
+                
+                    <div id="js-aboutme">努力前行的杰迷</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">TD</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">TD</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/深度学习">深度学习</a></li>
+                
+                    <li><a href="/tags/LeetCode">刷题LeetCode</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+</nav>
+      <div class="body-wrap"><article id="post-LeetCode-1352-Product-of-the-Last-K-Numbers" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2020/02/20/LeetCode-1352-Product-of-the-Last-K-Numbers/" class="article-date">
+      <time datetime="2020-02-20T02:57:53.000Z" itemprop="datePublished">2020-02-20</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      LeetCode 1352 Product of the Last K Numbers
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Array/">Array</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Design/">Design</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Medium/">Medium</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>LeetCode 1352 Product of the Last K Numbers | 问题描述 | 解题思路 | Java代码 | 相关问题</p>
+<a id="more"></a>
+<h2>问题描述</h2>
+<img src="https://raw.githubusercontent.com/tengdai722/tengdai722.github.io/master/img/leetcode_question/LC1352_1.png" width="75%" height="75%">
+<img src="https://raw.githubusercontent.com/tengdai722/tengdai722.github.io/master/img/leetcode_question/LC1352_2.png" width="75%" height="75%">
+<img src="https://raw.githubusercontent.com/tengdai722/tengdai722.github.io/master/img/leetcode_question/LC1352_3.png" width="75%" height="75%">
+<h2>解题思路</h2>
+<p>解题思路k个数的问题首先应该就想到创造累计数组。本题也不例外，创造一个数组存储截止到i处的乘积，这样后k个数的乘积就是总乘积除以前N-k个数的乘积。当有0出现的时候，前缀应该全部清零，因为包含它的乘积永远为0。</p>
+<h2>Java代码</h2>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ProductOfNumbers</span> </span>&#123;</span><br><span class="line">    List&lt;Integer&gt; cumProd = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">ProductOfNumbers</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        cumProd.add(<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> num)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (num == <span class="number">0</span>) &#123;</span><br><span class="line">            cumProd = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">            cumProd.add(<span class="number">1</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            cumProd.add(cumProd.get(cumProd.size() - <span class="number">1</span>) * num);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getProduct</span><span class="params">(<span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> N = cumProd.size();</span><br><span class="line">        <span class="keyword">if</span> (k &lt; N) &#123;</span><br><span class="line">            <span class="keyword">return</span> cumProd.get(N - <span class="number">1</span>) / cumProd.get(N - k - <span class="number">1</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Your ProductOfNumbers object will be instantiated and called as such:</span></span><br><span class="line"><span class="comment"> * ProductOfNumbers obj = new ProductOfNumbers();</span></span><br><span class="line"><span class="comment"> * obj.add(num);</span></span><br><span class="line"><span class="comment"> * int param_2 = obj.getProduct(k);</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+<h2>相关问题</h2>
+<p><a href></a></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+
+
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2019/10/28/LeetCode-1238-Circular-Permutation-in-Binary-Representation/">
+                    LeetCode 1238 Circular Permutation in Binary Representation
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"LeetCode 1352 Product of the Last K Numbers　| TD　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+        <section id="comments">
+    <style> aside.comment-bar { margin: auto 30px; }</style>
+    <div id="disqus_thread"></div>
+    <script>
+        var disqus_config = function(){
+            this.page.url = 'http://yoursite.com/2020/02/20/LeetCode-1352-Product-of-the-Last-K-Numbers/';
+            this.page.identifier = '2020/02/20/LeetCode-1352-Product-of-the-Last-K-Numbers/';
+        };
+        var loadComment = function(){
+            var d = document, s = d.createElement('script');
+            s.src = '//tengdai.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        }
+    </script>
+    
+    <script> loadComment(); </script>
+
+</section>
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2019/10/28/LeetCode-1238-Circular-Permutation-in-Binary-Representation/" title="下一篇: LeetCode 1238 Circular Permutation in Binary Representation">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2020/02/20/LeetCode-1352-Product-of-the-Last-K-Numbers/">LeetCode 1352 Product of the Last K Numbers</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/28/LeetCode-1238-Circular-Permutation-in-Binary-Representation/">LeetCode 1238 Circular Permutation in Binary Representation</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/26/LeetCode-753-Cracking-the-Safe/">LeetCode 753 Cracking the Safe</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/26/LeetCode-315-Count-of-Smaller-Numbers-After-Self/">LeetCode 315 Count of Smaller Numbers After Self</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/25/LeetCode-1057-Campus-Bikes/">LeetCode 1057 Campus Bikes</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/21/LeetCode-1229-Meeting-Scheduler/">LeetCode 1229 Meeting Scheduler</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/21/LeetCode-1234-Replace-the-Substring-for-Balanced-String/">LeetCode 1234 Replace the Substring for Balanced String</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/21/LeetCode-1233-Remove-Sub-Folders-from-the-Filesystem/">LeetCode 1233 Remove Sub-Folders from the Filesystem</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/24/LeetCode-2-Add-Two-Numbers/">LeetCode 2 Add Two Numbers</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/24/LeetCode-1099-Two-Sum-Less-Than-K/">LeetCode 1099 Two Sum Less Than K</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/24/LeetCode-653-Two-Sum-IV-Input-is-a-BST/">LeetCode 653 Two Sum IV - Input is a BST</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/24/LeetCode-560-Subarray-Sum-Equals-K/">LeetCode 560 Subarray Sum Equals K</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/23/LeetCode-170-Two-Sum-III-Data-structure-design/">LeetCode 170 Two Sum III - Data structure design</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/23/LeetCode-167-Two-Sum-II-Input-array-is-sorted/">LeetCode 167 Two Sum II - Input array is sorted</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/23/LeetCode-1200-Minimum-Absolute-Difference/">LeetCode 1200 Minimum Absolute Difference</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/22/LeetCode-1202-Smallest-String-With-Swaps/">LeetCode 1202 Smallest String With Swaps</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/22/LeetCode-1201-Ugly-Number-III/">LeetCode 1201 Ugly Number III</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/21/LeetCode-18-4Sum/">LeetCode 18 4Sum</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/21/LeetCode-15-3Sum/">LeetCode 15 3Sum</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/21/LeetCode-刷题总结/">LeetCode 刷题总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/20/LeetCode-1-Two-Sum/">LeetCode 1 Two Sum</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/17/从零开始Python实现卷积神经网络识别手写数字-MNIST/">从零开始Python实现卷积神经网络识别手写数字(MNIST)</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+<footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2019-2020 TD
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>
